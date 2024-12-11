@@ -6,7 +6,7 @@ const authFile = "src/config/auth.json";
 import dotenv from "dotenv";
 dotenv.config();
 
-test("Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confirm_tags:_'Feature'_'High Priority'", async ({
+test("WEB_APP:_Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confirm_tags:_'Feature'_'High Priority'", async ({
   page,
 }) => {
   const expectedToDo = "Implement user authentication";
@@ -41,7 +41,7 @@ test("Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confir
   expect(isPriorityTagePresented).toBeTruthy();
 });
 
-test("Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'", async ({
+test("WEB_APP:_Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'", async ({
   page,
 }) => {
   const expectedFixBugToDo = "Fix navigation bug";
@@ -66,8 +66,7 @@ test("Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'", 
 
 });
 
-//TODO!!!!
-test("Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'", async ({
+test("WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'", async ({
   page,
 }) => {
   const expectedInProgressText = "Design system updates";
@@ -78,7 +77,7 @@ test("Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm 
   await loginPage.fillPassword(process.env.APP_PASSWORD!);
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectHeaderToBeVisible();
-  homePage.navigateToWebApp();
+  homePage.navigateToMobileApp();
   const actualInProgressItemLocator = await homePage.getInProgressByText(expectedInProgressText);
   const actualInProgressItemText = await actualInProgressItemLocator?.locator("h3").innerText();
   expect(actualInProgressItemText).toBe(expectedInProgressText);
@@ -88,6 +87,33 @@ test("Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm 
   );
   console.log(isDesignTagPresented);
   expect(isDesignTagPresented).toBeTruthy();
+});
 
 
+//TODO!!!!
+test("MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and_Confirm tags: 'Feature'", async ({
+  page,
+}) => {
+  const expectedToDoText = "Push notification system";
+  const expectedTag = "Feature";
+  const loginPage = new LoginPage(page);
+  await loginPage.navigateToLoginPage();
+  await loginPage.fillUsername(process.env.APP_USERNAME!);
+  await loginPage.fillPassword(process.env.APP_PASSWORD!);
+  const homePage = await loginPage.clickLoginButton();
+  await homePage.expectHeaderToBeVisible();
+  await homePage.navigateToMobileApp();
+  //await page.waitForTimeout(3000); // Wait for 3 seconds (3000 milliseconds)
+
+
+  const actualInToDoItemLocator = await homePage.getToDoByText(expectedToDoText);
+  const actualInProgressItemText = await actualInToDoItemLocator?.locator("h3").innerText();
+  expect(actualInProgressItemText).toBe(expectedToDoText);
+
+  const isFeatureTagPresented = await homePage.checkTagPresenceForToDoItem(expectedToDoText,
+    expectedTag
+  );
+  console.log(isFeatureTagPresented);
+  expect(isFeatureTagPresented).toBeTruthy();
+  
 });
