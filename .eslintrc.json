@@ -9,12 +9,6 @@
       "ecmaVersion": 2018,
       "sourceType": "module"
     },
-    "rules": {
-      // Add your project-specific rules here
-    //   "quotes": ["error", "single"]//
-
-
     
-    }
   }
   

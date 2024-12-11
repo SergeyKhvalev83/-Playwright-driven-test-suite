@@ -24,7 +24,7 @@ export default class boardPage {
       .click()
       .catch((error) => {
         logger.error(`Error clicking web app button: ${error}`);
-        throw error; // rethrow the error if needed
+        throw error; 
       })
       .then(() => logger.info("Clicked web app button"));
 
@@ -84,13 +84,10 @@ export default class boardPage {
         .nth(i)
         .locator("h3")
         .innerText();
-      console.log("INPROGRESS ITEM TEXT: ", retrievedInProgresItemText);
       if (retrievedInProgresItemText == inProgress) {
-        //inProgressText = retrievedInProgresItemText;
         return listOfInProgressItems.nth(i);
       }
     }
-    //return inProgressText;
     return null;
   }
 
@@ -122,13 +119,11 @@ export default class boardPage {
         this.tagsContainerLocator
       );
       const itemCount = await featurePriorityContainer.count();
-      console.log("!!!!!!!!!!!!", itemCount);
 
       for (let i = 0; i < itemCount; i++) {
         const retrievedFeatureText = await featurePriorityContainer
           .nth(i)
           .textContent();
-        console.log(retrievedFeatureText);
         if (retrievedFeatureText == tagTitle) {
           isPriorityTagPresented = true;
         }
@@ -150,13 +145,11 @@ export default class boardPage {
         this.tagsContainerLocator
       );
       const itemCount = await tagsContainer.count();
-      console.log("!!!!!!!!!!!!", itemCount);
 
       for (let i = 0; i < itemCount; i++) {
         const retrievedTagText = await tagsContainer
           .nth(i)
           .textContent();
-        console.log(retrievedTagText);
         if (retrievedTagText == tagTitle) {
           isTagPresented = true;
         }
@@ -178,13 +171,10 @@ export default class boardPage {
         this.tagsContainerLocator
       );
       const itemCount = await tagsContainer.count();
-      console.log("!!!!!!!!!!!!", itemCount);
-
       for (let i = 0; i < itemCount; i++) {
         const retrievedTagText = await tagsContainer
           .nth(i)
           .textContent();
-        console.log(retrievedTagText);
         if (retrievedTagText == tagTitle) {
           isTagPresented = true;
         }
@@ -195,27 +185,5 @@ export default class boardPage {
   }
 
 
-  /*
-
-  async navigateToContactTab(){
-
-    await expect(this.page.getByRole('link', { name: this.contactsLinkLocator })).toBeVisible();
-    logger.info("Contacts Tab is visible")
-    await this.page.getByRole('link', { name: this.contactsLinkLocator }).click();
-    logger.info("Contacts Tab is clicked")
-    return new ContactPage(this.page);
-    
-  }
-
-  async navigateToCaseTab(){
-
-    await expect(this.page.getByRole('link', { name: this.contactsLinkLocator })).toBeVisible();
-    logger.info("Contacts Tab is visible")
-    await this.page.getByRole('link', { name: this.contactsLinkLocator }).click();
-    logger.info("Contacts Tab is clicked")
-    return new ContactPage(this.page);
-    
-  }
-
-  */
+ 
 }
