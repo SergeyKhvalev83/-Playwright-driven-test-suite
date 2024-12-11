@@ -245,7 +245,7 @@ test("MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm t
     ?.locator("h3")
     .innerText();
   logger.info(
-    `ACTUAL RESULT: ${actualDoneItemText}, EXPECTED RESULT: ${expectedDoneItemText}`
+    `ACTUAL RESULT: ${actualDoneItemText}, EXPECTED RESULT : ${expectedDoneItemText}`
   );
 
   expect(actualDoneItemText).toBe(expectedDoneItemText);
