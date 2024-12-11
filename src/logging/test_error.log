@@ -1,0 +1,232 @@
+2024-03-09T02:39:40+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:39:40+05:30 [error]: Invalid locator: input[name='username']
+2024-03-09T02:39:40+05:30 [error]: Invalid locator: .username
+2024-03-09T02:39:40+05:30 [error]: Invalid locator: //*[@id='username']
+2024-03-09T02:39:40+05:30 [error]: All locators are invalid
+2024-03-09T02:40:01+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:40:01+05:30 [error]: Invalid locator: input[name='username']
+2024-03-09T02:40:01+05:30 [error]: Invalid locator: .username
+2024-03-09T02:40:01+05:30 [error]: Invalid locator: //*[@id='username']
+2024-03-09T02:40:01+05:30 [error]: All locators are invalid
+2024-03-09T02:41:44+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:41:44+05:30 [error]: Invalid locator: input[name="username"]
+2024-03-09T02:41:44+05:30 [error]: Invalid locator: .username
+2024-03-09T02:41:44+05:30 [error]: Invalid locator: //*[@id='username']
+2024-03-09T02:41:44+05:30 [error]: All locators are invalid
+2024-03-09T02:50:41+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:53:39+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:53:39+05:30 [error]: Invalid locator: input[name="username"]
+2024-03-09T02:53:39+05:30 [error]: Invalid locator: .username
+2024-03-09T02:53:39+05:30 [error]: Invalid locator: //*[@id='username']
+2024-03-09T02:53:39+05:30 [error]: All locators are invalid
+2024-03-09T02:54:13+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:55:01+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:56:47+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:59:47+05:30 [error]: Invalid locator: #username88
+2024-03-09T02:59:52+05:30 [error]: Invalid locator: input[name="username88"]
+2024-03-11T12:47:55+05:30 [error]: Invalid locator: #username9
+2024-03-11T12:48:47+05:30 [error]:  Invalid locator: #username9
+2024-03-11T12:48:52+05:30 [error]:  Invalid locator: input[name="username9"]
+2024-03-11T12:48:57+05:30 [error]:  Invalid locator: .username9
+2024-03-11T12:49:02+05:30 [error]:  Invalid locator: //*[@id='username9']
+2024-03-11T12:49:02+05:30 [error]: All locators are invalid
+2024-03-11T13:00:49+05:30 [error]:  Invalid locator: #username9
+2024-03-11T13:00:55+05:30 [error]:  Invalid locator: input[name="username9"]
+2024-03-11T13:01:00+05:30 [error]:  Invalid locator: .username9
+2024-03-11T13:01:05+05:30 [error]:  Invalid locator: //*[@id='username9']
+2024-03-11T13:01:05+05:30 [error]: All locators are invalid
+2024-03-11T13:44:41+05:30 [error]:  Invalid locator: #username9
+2024-03-11T13:45:13+05:30 [error]:  Invalid locator: #username9
+2024-03-11T13:45:18+05:30 [error]:  Invalid locator: input[name="username8"]
+2024-03-11T13:45:23+05:30 [error]:  Invalid locator: .username8
+2024-03-11T13:45:23+05:30 [error]:  Invalid locator: //*[@id='username8]
+2024-03-11T13:45:23+05:30 [error]: All locators are invalid
+2024-12-10T22:34:08+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T22:37:10+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:47:50+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:50:41+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:53:15+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:54:48+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:56:05+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:56:45+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:57:06+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:58:14+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-10T23:59:11+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:07:17+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:12:12+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:15:18+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:15:58+05:30 [error]: Error clicking login button: Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:17:22+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:19:59+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T00:20:24+05:30 [error]: Error clicking login button: Error: [31mTimed out 15000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: getByTitle('Service')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 15000ms[22m
+[2m  - waiting for getByTitle('Service')[22m
+
+2024-12-11T02:20:15+05:30 [error]: Error dashboard main header visibility: Error: [31mTimed out 3000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: locator('//h1[@text()=\'Projects\']')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 3000ms[22m
+[2m  - waiting for locator('//h1[@text()=\'Projects\']')[22m
+
+2024-12-11T02:20:50+05:30 [error]: Error dashboard main header visibility: Error: [31mTimed out 3000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: locator('//h1[@text()=\'Projects\']')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 3000ms[22m
+[2m  - waiting for locator('//h1[@text()=\'Projects\']')[22m
+
+2024-12-11T02:29:28+05:30 [error]: Error dashboard main header visibility: Error: [31mTimed out 3000ms waiting for [39m[2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m()[22m
+
+Locator: locator('//h1[text()=\'Project\']')
+Expected: visible
+Received: hidden
+Call log:
+  [2m- expect.toBeVisible with timeout 3000ms[22m
+[2m  - waiting for locator('//h1[text()=\'Project\']')[22m
+
