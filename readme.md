@@ -1,4 +1,4 @@
-# Enterprise Test Automation Framework for AUT (Salesforce)
+# Enterprise Test Automation Framework for UT
 
 ## 1. Overview
 
