@@ -1,16 +1,20 @@
-import { Page, expect } from "@playwright/test";
+import { Locator, Page, expect } from "@playwright/test";
 import logger from "../utils/LoggerUtil";
 
 export default class boardPage {
   private readonly mainHeaderLocator = "//h1[text()='Projects']";
-  private readonly webAppButtonLocator = "button:has(h2:text('Web Application'))";
+  private readonly webAppButtonLocator =
+    "button:has(h2:text('Web Application'))";
   private readonly mobileAppButtonLocator =
     "button:has(h2:text('Mobile Application'))";
   private readonly toDoColumnLocator = "//h2[text()='To Do']/parent::*";
-  private readonly appWebOrMibileHeaderLocator =
-    ".px-6 py-4 flex justify-between items-center";
+  private readonly inProgressColumnLocator =
+    "//h2[text()='In Progress']/parent::*";
 
-    private readonly featPriorContainerLocator = ".px-2.py-1.rounded-full.text-xs"
+  //private readonly appWebOrMibileHeaderLocator =    ".px-6 py-4 flex justify-between items-center";
+
+  private readonly featPriorContainerLocator =
+    ".px-2.py-1.rounded-full.text-xs";
 
   constructor(private page: Page) {}
 
@@ -24,7 +28,9 @@ export default class boardPage {
       })
       .then(() => logger.info("Clicked web app button"));
 
-    await this.page.locator("text=Web Application").waitFor({ timeout: 3000 }); // Wait up to 5 seconds
+    await this.page
+      .locator("//h1[text()='Web Application']")
+      .waitFor({ timeout: 3000 });
   }
 
   async navigateToMobileApp() {
@@ -33,12 +39,12 @@ export default class boardPage {
       .click()
       .catch((error) => {
         logger.error(`Error clicking mobile app button: ${error}`);
-        throw error; // rethrow the error if needed
+        throw error;
       })
       .then(() => logger.info("Clicked mobile app button"));
     await this.page
-      .locator("text=Mobile Application")
-      .waitFor({ timeout: 3000 }); // Wait up to 5 seconds
+      .locator("//h1[text()='Mobile Application']")
+      .waitFor({ timeout: 3000 });
   }
 
   async expectHeaderToBeVisible() {
@@ -48,52 +54,79 @@ export default class boardPage {
       })
       .catch((error) => {
         logger.error(`Error dashboard main header visibility: ${error}`);
-        throw error; // rethrow the error if needed
+        throw error;
       })
       .then(() => logger.info("Dashboard main header is visible"));
   }
 
-  async getToDoByText(toDoTitle: string): Promise<string> {
-    let toDoText = "";
+  async getToDoByText(toDoTitle: string): Promise<Locator | null> {
     const toDoColumn = this.page.locator(this.toDoColumnLocator);
     const listOfToDoes = toDoColumn.locator(".bg-white");
     const toDoesCount = await listOfToDoes.count();
-    //console.log("!!!!!!!!!!!!", await listOfToDoes.count());
-
     for (let i = 0; i < toDoesCount; i++) {
       const retrievedToDoText = await listOfToDoes
         .nth(i)
         .locator("h3")
         .innerText();
       if (retrievedToDoText == toDoTitle) {
-        toDoText = retrievedToDoText;
+        return listOfToDoes.nth(i);
       }
     }
-    return toDoText;
+    return null;
   }
 
-  async checkTagPresence(text: string): Promise<boolean> {
+  async getInProgressByText(inProgress: string): Promise<Locator | null> {
+    // let inProgressText: Element | null = null;
+
+    const inProgressColumn = this.page.locator(this.inProgressColumnLocator);
+    const listOfInProgressItems = inProgressColumn.locator(".bg-white");
+    const inProgressItemsCount = await listOfInProgressItems.count();
+    for (let i = 0; i < inProgressItemsCount; i++) {
+      const retrievedInProgresItemText = await listOfInProgressItems
+        .nth(i)
+        .locator("h3")
+        .innerText();
+      console.log("INPROGRESS ITEM TEXT: ", retrievedInProgresItemText);
+      if (retrievedInProgresItemText == inProgress) {
+        //inProgressText = retrievedInProgresItemText;
+        return listOfInProgressItems.nth(i);
+      }
+    }
+    //return inProgressText;
+    return null;
+  }
+
+  async checkTagPresenceForToDoItem(
+    todoTitle: string,
+    tagTitle: string
+  ): Promise<boolean> {
     let isPriorityTagPresented = false;
     await this.page.waitForSelector(this.toDoColumnLocator);
 
-    const toDoColumn = this.page.locator(this.toDoColumnLocator);
-    const featurePriorityContainer = toDoColumn.locator(this.featPriorContainerLocator);
-    const itemCount = await featurePriorityContainer.count();
-    console.log("!!!!!!!!!!!!", itemCount);
+    const toDoLocator = await this.getToDoByText(todoTitle);
 
-    for (let i = 0; i < itemCount; i++) {
-      const retrievedFeatureText = await featurePriorityContainer
-        .nth(i)
-        .textContent();
+    //const toDoColumn = this.page.locator(this.toDoColumnLocator);
+    if (toDoLocator) {
+      const featurePriorityContainer = toDoLocator.locator(
+        this.featPriorContainerLocator
+      );
+      const itemCount = await featurePriorityContainer.count();
+      console.log("!!!!!!!!!!!!", itemCount);
+
+      for (let i = 0; i < itemCount; i++) {
+        const retrievedFeatureText = await featurePriorityContainer
+          .nth(i)
+          .textContent();
         console.log(retrievedFeatureText);
-      if (retrievedFeatureText == text) {
-        isPriorityTagPresented = true;
+        if (retrievedFeatureText == tagTitle) {
+          isPriorityTagPresented = true;
+        }
       }
     }
+
     return isPriorityTagPresented;
   }
 
-  
   /*
 
   async navigateToContactTab(){
