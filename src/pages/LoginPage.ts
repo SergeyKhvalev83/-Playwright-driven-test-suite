@@ -2,7 +2,6 @@ import { Page } from "@playwright/test";
 import boardPage from "./boardPage";
 import logger from "../utils/LoggerUtil";
 
-
 export default class LoginPage {
   private readonly usernameInputSelector = "#username";
   private readonly passwordInputSelector = "#password";
@@ -18,7 +17,6 @@ export default class LoginPage {
   }
 
   async navigateToLoginPage() {
-    //await this.page.goto("https://animated-gingersnap-8cf7f2.netlify.app/");
     await this.page.goto(process.env.LOGIN_PAGE!);
     logger.info("Navigated to demo app");
   }
@@ -27,7 +25,6 @@ export default class LoginPage {
     await this.page.locator(this.usernameInputSelector).fill(username);
     logger.info("Send username");
   }
-
 
   async fillPassword(password: string) {
     await this.page.locator(this.passwordInputSelector).fill(password);
@@ -40,7 +37,7 @@ export default class LoginPage {
       .click()
       .catch((error) => {
         logger.error(`Error clicking login button: ${error}`);
-        throw error; // rethrow the error if needed
+        throw error; 
       })
       .then(() => logger.info("Clicked login button"));
 

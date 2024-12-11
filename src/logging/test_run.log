@@ -62,3 +62,195 @@
 2024-12-11T16:57:37-05:00 [info]: Mobile app clicked successfully
 2024-12-11T16:57:37-05:00 [info]: ACTUAL RESULT: Offline mode, EXPECTED RESULT: Offline mode
 2024-12-11T16:57:37-05:00 [info]: ACTUAL RESULT: App icon design, EXPECTED RESULT: App icon design
+2024-12-11T17:01:43-05:00 [info]: TEST CASE TITLE: fWEB_APP:_Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confirm_tags:_'Feature'_'High Priority'
+2024-12-11T17:01:43-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'
+2024-12-11T17:01:43-05:00 [info]: TEST CASE TITLE: MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and_Confirm tags: 'Feature'
+2024-12-11T17:01:43-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:44-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:44-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:44-05:00 [info]: Send username
+2024-12-11T17:01:44-05:00 [info]: Send password
+2024-12-11T17:01:44-05:00 [info]: Send username
+2024-12-11T17:01:44-05:00 [info]: Clicked login button
+2024-12-11T17:01:45-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:45-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:45-05:00 [info]: Web app clicked successfully
+2024-12-11T17:01:45-05:00 [info]: ACTUAL RESULT: Implement user authentication, EXPECTED RESULT: Implement user authentication
+2024-12-11T17:01:45-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'
+2024-12-11T17:01:45-05:00 [info]: Send username
+2024-12-11T17:01:45-05:00 [info]: Clicked web app button
+2024-12-11T17:01:45-05:00 [info]: Send password
+2024-12-11T17:01:45-05:00 [info]: Does tag Feature is presented: true
+2024-12-11T17:01:45-05:00 [info]: Does tag High Priority is presented: true
+2024-12-11T17:01:45-05:00 [info]: Send password
+2024-12-11T17:01:45-05:00 [info]: Clicked login button
+2024-12-11T17:01:45-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:45-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:45-05:00 [info]: Web app clicked successfully
+2024-12-11T17:01:45-05:00 [info]: Clicked login button
+2024-12-11T17:01:45-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:45-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:45-05:00 [info]: ACTUAL RESULT: Fix navigation bug, EXPECTED RESULT: Fix navigation bug
+2024-12-11T17:01:45-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:45-05:00 [info]: Clicked web app button
+2024-12-11T17:01:45-05:00 [info]: Send username
+2024-12-11T17:01:45-05:00 [info]: Clicked mobile app button
+2024-12-11T17:01:45-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:01:45-05:00 [info]: Send password
+2024-12-11T17:01:45-05:00 [info]: ACTUAL RESULT: Push notification system, EXPECTED RESULT: Push notification system
+2024-12-11T17:01:45-05:00 [info]: Does tag Bug is presented: true
+2024-12-11T17:01:46-05:00 [info]: Clicked login button
+2024-12-11T17:01:46-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:46-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:46-05:00 [info]: Web app clicked successfully
+2024-12-11T17:01:46-05:00 [info]: ACTUAL RESULT: Design system updates, EXPECTED RESULT: Design system updates
+2024-12-11T17:01:46-05:00 [info]: Does tag Design is presented: true
+2024-12-11T17:01:46-05:00 [info]: Clicked web app button
+2024-12-11T17:01:47-05:00 [info]: TEST CASE TITLE: MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confirm tags:_'Feature'_&_'High Priority'
+2024-12-11T17:01:47-05:00 [info]: TEST CASE TITLE: MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm tags:_'Design'
+2024-12-11T17:01:48-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:48-05:00 [info]: Send username
+2024-12-11T17:01:48-05:00 [info]: Send password
+2024-12-11T17:01:48-05:00 [info]: Navigated to demo app
+2024-12-11T17:01:48-05:00 [info]: Clicked login button
+2024-12-11T17:01:48-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:48-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:48-05:00 [info]: Send username
+2024-12-11T17:01:48-05:00 [info]: Send password
+2024-12-11T17:01:48-05:00 [info]: Clicked mobile app button
+2024-12-11T17:01:48-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:01:48-05:00 [info]: ACTUAL RESULT: Offline mode, EXPECTED RESULT: Offline mode
+2024-12-11T17:01:48-05:00 [info]: Clicked login button
+2024-12-11T17:01:48-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:01:48-05:00 [info]: Login is completed successfully
+2024-12-11T17:01:48-05:00 [info]: Clicked mobile app button
+2024-12-11T17:01:48-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:01:48-05:00 [info]: ACTUAL RESULT: App icon design, EXPECTED RESULT: App icon design
+2024-12-11T17:02:09-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'
+2024-12-11T17:02:10-05:00 [info]: TEST CASE TITLE: MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and_Confirm tags: 'Feature'
+2024-12-11T17:02:10-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:10-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:10-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'
+2024-12-11T17:02:10-05:00 [info]: Send username
+2024-12-11T17:02:11-05:00 [info]: Send password
+2024-12-11T17:02:11-05:00 [info]: Send username
+2024-12-11T17:02:11-05:00 [info]: TEST CASE TITLE: fWEB_APP:_Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confirm_tags:_'Feature'_'High Priority'
+2024-12-11T17:02:11-05:00 [info]: Send password
+2024-12-11T17:02:11-05:00 [info]: Clicked login button
+2024-12-11T17:02:11-05:00 [info]: Clicked login button
+2024-12-11T17:02:11-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:11-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:11-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:11-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:11-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:11-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:11-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:11-05:00 [info]: ACTUAL RESULT: Fix navigation bug, EXPECTED RESULT: Fix navigation bug
+2024-12-11T17:02:11-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:11-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:11-05:00 [info]: ACTUAL RESULT: Push notification system, EXPECTED RESULT: Push notification system
+2024-12-11T17:02:12-05:00 [info]: Clicked web app button
+2024-12-11T17:02:12-05:00 [info]: Does tag Bug is presented: true
+2024-12-11T17:02:12-05:00 [info]: Send username
+2024-12-11T17:02:12-05:00 [info]: Send password
+2024-12-11T17:02:12-05:00 [info]: Clicked login button
+2024-12-11T17:02:12-05:00 [info]: Send username
+2024-12-11T17:02:12-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:12-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:12-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:12-05:00 [info]: ACTUAL RESULT: Implement user authentication, EXPECTED RESULT: Implement user authentication
+2024-12-11T17:02:12-05:00 [info]: Clicked web app button
+2024-12-11T17:02:13-05:00 [info]: Does tag Feature is presented: true
+2024-12-11T17:02:13-05:00 [info]: Send password
+2024-12-11T17:02:13-05:00 [info]: Does tag High Priority is presented: true
+2024-12-11T17:02:13-05:00 [info]: Clicked login button
+2024-12-11T17:02:13-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:13-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:13-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:13-05:00 [info]: ACTUAL RESULT: Design system updates, EXPECTED RESULT: Design system updates
+2024-12-11T17:02:14-05:00 [info]: Clicked web app button
+2024-12-11T17:02:14-05:00 [info]: Does tag Design is presented: true
+2024-12-11T17:02:14-05:00 [info]: TEST CASE TITLE: MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm tags:_'Design'
+2024-12-11T17:02:15-05:00 [info]: TEST CASE TITLE: MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confirm tags:_'Feature'_&_'High Priority'
+2024-12-11T17:02:15-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:15-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:15-05:00 [info]: Send username
+2024-12-11T17:02:15-05:00 [info]: Send password
+2024-12-11T17:02:15-05:00 [info]: Send username
+2024-12-11T17:02:15-05:00 [info]: Send password
+2024-12-11T17:02:15-05:00 [info]: Clicked login button
+2024-12-11T17:02:15-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:15-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:15-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:15-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:15-05:00 [info]: Clicked login button
+2024-12-11T17:02:15-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:15-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:15-05:00 [info]: ACTUAL RESULT: undefined, EXPECTED RESULT: App icon desig
+2024-12-11T17:02:16-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:16-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:16-05:00 [info]: ACTUAL RESULT: Offline mode, EXPECTED RESULT: Offline mode
+2024-12-11T17:02:51-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'
+2024-12-11T17:02:51-05:00 [info]: TEST CASE TITLE: WEB_APP:_Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'
+2024-12-11T17:02:51-05:00 [info]: TEST CASE TITLE: MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and_Confirm tags: 'Feature'
+2024-12-11T17:02:51-05:00 [info]: TEST CASE TITLE: fWEB_APP:_Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_and_Confirm_tags:_'Feature'_'High Priority'
+2024-12-11T17:02:51-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:51-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:51-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:52-05:00 [info]: Send username
+2024-12-11T17:02:52-05:00 [info]: Send username
+2024-12-11T17:02:52-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:52-05:00 [info]: Send username
+2024-12-11T17:02:52-05:00 [info]: Send password
+2024-12-11T17:02:52-05:00 [info]: Send password
+2024-12-11T17:02:52-05:00 [info]: Send username
+2024-12-11T17:02:52-05:00 [info]: Send password
+2024-12-11T17:02:52-05:00 [info]: Clicked login button
+2024-12-11T17:02:52-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:52-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:52-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:53-05:00 [info]: Clicked login button
+2024-12-11T17:02:53-05:00 [info]: ACTUAL RESULT: Design system updates, EXPECTED RESULT: Design system updates
+2024-12-11T17:02:53-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:53-05:00 [info]: Send password
+2024-12-11T17:02:53-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:53-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:53-05:00 [info]: ACTUAL RESULT: Implement user authentication, EXPECTED RESULT: Implement user authentication
+2024-12-11T17:02:53-05:00 [info]: Clicked web app button
+2024-12-11T17:02:53-05:00 [info]: Does tag Design is presented: true
+2024-12-11T17:02:53-05:00 [info]: Clicked web app button
+2024-12-11T17:02:53-05:00 [info]: Does tag Feature is presented: true
+2024-12-11T17:02:53-05:00 [info]: Does tag High Priority is presented: true
+2024-12-11T17:02:53-05:00 [info]: Clicked login button
+2024-12-11T17:02:53-05:00 [info]: Clicked login button
+2024-12-11T17:02:53-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:53-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:53-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:53-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:53-05:00 [info]: Web app clicked successfully
+2024-12-11T17:02:53-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:53-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:53-05:00 [info]: ACTUAL RESULT: Push notification system, EXPECTED RESULT: Push notification system
+2024-12-11T17:02:54-05:00 [info]: ACTUAL RESULT: Fix navigation bug, EXPECTED RESULT: Fix navigation bug
+2024-12-11T17:02:54-05:00 [info]: Clicked web app button
+2024-12-11T17:02:54-05:00 [info]: Does tag Bug is presented: true
+2024-12-11T17:02:55-05:00 [info]: TEST CASE TITLE: MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm tags:_'Design'
+2024-12-11T17:02:55-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:55-05:00 [info]: Send username
+2024-12-11T17:02:56-05:00 [info]: Send password
+2024-12-11T17:02:56-05:00 [info]: Clicked login button
+2024-12-11T17:02:56-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:56-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:56-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:56-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:56-05:00 [info]: ACTUAL RESULT: App icon design, EXPECTED RESULT: App icon design
+2024-12-11T17:02:56-05:00 [info]: TEST CASE TITLE: MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confirm tags:_'Feature'_&_'High Priority'
+2024-12-11T17:02:57-05:00 [info]: Navigated to demo app
+2024-12-11T17:02:57-05:00 [info]: Send username
+2024-12-11T17:02:57-05:00 [info]: Send password
+2024-12-11T17:02:57-05:00 [info]: Clicked login button
+2024-12-11T17:02:57-05:00 [info]: Dashboard main header is visible
+2024-12-11T17:02:57-05:00 [info]: Login is completed successfully
+2024-12-11T17:02:57-05:00 [info]: Clicked mobile app button
+2024-12-11T17:02:57-05:00 [info]: Mobile app clicked successfully
+2024-12-11T17:02:57-05:00 [info]: ACTUAL RESULT: Offline mode, EXPECTED RESULT: Offline mode

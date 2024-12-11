@@ -10,11 +10,9 @@ export default class boardPage {
   private readonly toDoColumnLocator = "//h2[text()='To Do']/parent::*";
   private readonly inProgressColumnLocator =
     "//h2[text()='In Progress']/parent::*";
-    private readonly doneColumnLocator = "//h2[text()='Done']/parent::*";
+  private readonly doneColumnLocator = "//h2[text()='Done']/parent::*";
 
-  
-  private readonly tagsContainerLocator =
-    ".px-2.py-1.rounded-full.text-xs";
+  private readonly tagsContainerLocator = ".px-2.py-1.rounded-full.text-xs";
 
   constructor(private page: Page) {}
 
@@ -24,7 +22,7 @@ export default class boardPage {
       .click()
       .catch((error) => {
         logger.error(`Error clicking web app button: ${error}`);
-        throw error; 
+        throw error;
       })
       .then(() => logger.info("Clicked web app button"));
 
@@ -139,7 +137,9 @@ export default class boardPage {
   ): Promise<boolean> {
     let isTagPresented = false;
     await this.page.waitForSelector(this.toDoColumnLocator);
-    const inProgressLocator = await this.getInProgressItemByText(inProgressItemTitle);
+    const inProgressLocator = await this.getInProgressItemByText(
+      inProgressItemTitle
+    );
     if (inProgressLocator) {
       const tagsContainer = inProgressLocator.locator(
         this.tagsContainerLocator
@@ -147,9 +147,7 @@ export default class boardPage {
       const itemCount = await tagsContainer.count();
 
       for (let i = 0; i < itemCount; i++) {
-        const retrievedTagText = await tagsContainer
-          .nth(i)
-          .textContent();
+        const retrievedTagText = await tagsContainer.nth(i).textContent();
         if (retrievedTagText == tagTitle) {
           isTagPresented = true;
         }
@@ -167,14 +165,10 @@ export default class boardPage {
     await this.page.waitForSelector(this.toDoColumnLocator);
     const doneItemLocator = await this.getDoneItemByText(doneItemTitle);
     if (doneItemLocator) {
-      const tagsContainer = doneItemLocator.locator(
-        this.tagsContainerLocator
-      );
+      const tagsContainer = doneItemLocator.locator(this.tagsContainerLocator);
       const itemCount = await tagsContainer.count();
       for (let i = 0; i < itemCount; i++) {
-        const retrievedTagText = await tagsContainer
-          .nth(i)
-          .textContent();
+        const retrievedTagText = await tagsContainer.nth(i).textContent();
         if (retrievedTagText == tagTitle) {
           isTagPresented = true;
         }
@@ -183,7 +177,4 @@ export default class boardPage {
 
     return isTagPresented;
   }
-
-
- 
 }
