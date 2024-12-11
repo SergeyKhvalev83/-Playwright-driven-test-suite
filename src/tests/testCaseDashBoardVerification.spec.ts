@@ -117,3 +117,38 @@ test("MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and
   expect(isFeatureTagPresented).toBeTruthy();
   
 });
+
+
+
+//TODO!!!!
+test("MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confirm tags:_'Feature'_&_'High Priority'", async ({
+  page,
+}) => {
+  const expectedInProgressText = "Offline mode";
+  const expectedFeatureTag = "Feature";
+  const expectedPriorityTag = "High Priority";
+
+  const loginPage = new LoginPage(page);
+  await loginPage.navigateToLoginPage();
+  await loginPage.fillUsername(process.env.APP_USERNAME!);
+  await loginPage.fillPassword(process.env.APP_PASSWORD!);
+  const homePage = await loginPage.clickLoginButton();
+  await homePage.expectHeaderToBeVisible();
+  await homePage.navigateToMobileApp();
+  const actualInProgressItemLocator = await homePage.getInProgressByText(expectedInProgressText);
+  const actualInProgressItemText = await actualInProgressItemLocator?.locator("h3").innerText();
+  expect(actualInProgressItemText).toBe(expectedInProgressText);
+
+  const isFeatureTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
+    expectedFeatureTag
+  );
+  console.log(isFeatureTagPresented);
+  expect(isFeatureTagPresented).toBeTruthy();
+
+  const isPriorityTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
+    expectedPriorityTag
+  );
+  console.log(isPriorityTagPresented);
+  expect(isPriorityTagPresented).toBeTruthy();
+
+});
