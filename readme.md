@@ -25,10 +25,10 @@ The automation framework is designed to provide a robust, scalable, and feature-
 
 - **Objective:** Develop modular and reusable utilities to optimize code maintenance.
 
-### 2.6 Testing results screenshots
+### 2.7 Testing results screenshots
 - **Objective:** Provide test result visualisation.
 
-### 2.7 Parallel Testing
+### 2.8 Parallel Testing
 - **Objective:** Execute tests concurrently for faster feedback and optimized test suite execution.
 
 ### Also can be implemented: Cross-Browser Testing, Multiple Environments
