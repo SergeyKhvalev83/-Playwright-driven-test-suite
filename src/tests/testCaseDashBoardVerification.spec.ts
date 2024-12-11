@@ -254,6 +254,6 @@ test("MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm t
     expectedDoneItemText,
     expectedTag
   );
-  `Does tag ${expectedTag} is presented: ${isFeatureTagPresented}`;
+  `Does tag ${expectedTag} is presented : ${isFeatureTagPresented}`;
   expect(isFeatureTagPresented).toBeTruthy();
 });
