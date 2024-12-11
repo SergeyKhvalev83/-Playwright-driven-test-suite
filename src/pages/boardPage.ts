@@ -13,7 +13,7 @@ export default class boardPage {
 
   //private readonly appWebOrMibileHeaderLocator =    ".px-6 py-4 flex justify-between items-center";
 
-  private readonly featPriorContainerLocator =
+  private readonly tagsContainerLocator =
     ".px-2.py-1.rounded-full.text-xs";
 
   constructor(private page: Page) {}
@@ -76,8 +76,6 @@ export default class boardPage {
   }
 
   async getInProgressByText(inProgress: string): Promise<Locator | null> {
-    // let inProgressText: Element | null = null;
-
     const inProgressColumn = this.page.locator(this.inProgressColumnLocator);
     const listOfInProgressItems = inProgressColumn.locator(".bg-white");
     const inProgressItemsCount = await listOfInProgressItems.count();
@@ -102,13 +100,10 @@ export default class boardPage {
   ): Promise<boolean> {
     let isPriorityTagPresented = false;
     await this.page.waitForSelector(this.toDoColumnLocator);
-
     const toDoLocator = await this.getToDoByText(todoTitle);
-
-    //const toDoColumn = this.page.locator(this.toDoColumnLocator);
     if (toDoLocator) {
       const featurePriorityContainer = toDoLocator.locator(
-        this.featPriorContainerLocator
+        this.tagsContainerLocator
       );
       const itemCount = await featurePriorityContainer.count();
       console.log("!!!!!!!!!!!!", itemCount);
@@ -126,6 +121,36 @@ export default class boardPage {
 
     return isPriorityTagPresented;
   }
+
+  async checkTagPresenceForInProgressItem(
+    inProgressItemTitle: string,
+    tagTitle: string
+  ): Promise<boolean> {
+    let isTagPresented = false;
+    await this.page.waitForSelector(this.toDoColumnLocator);
+    const inProgressLocator = await this.getInProgressByText(inProgressItemTitle);
+    if (inProgressLocator) {
+      const tagsContainer = inProgressLocator.locator(
+        this.tagsContainerLocator
+      );
+      const itemCount = await tagsContainer.count();
+      console.log("!!!!!!!!!!!!", itemCount);
+
+      for (let i = 0; i < itemCount; i++) {
+        const retrievedTagText = await tagsContainer
+          .nth(i)
+          .textContent();
+        console.log(retrievedTagText);
+        if (retrievedTagText == tagTitle) {
+          isTagPresented = true;
+        }
+      }
+    }
+
+    return isTagPresented;
+  }
+
+
 
   /*
 

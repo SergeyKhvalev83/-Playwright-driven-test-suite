@@ -54,7 +54,7 @@ test("Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:_'Bug'", 
   await homePage.expectHeaderToBeVisible();
   homePage.navigateToWebApp();
   const actualFixBugToDoLocator = await homePage.getToDoByText(expectedFixBugToDo);
-  const actualFixBugToDoText = await actualFixBugToDoLocator?.locator("h3").innerText()
+  const actualFixBugToDoText = await actualFixBugToDoLocator?.locator("h3").innerText();
   expect(actualFixBugToDoText).toBe(expectedFixBugToDo);
 
   const isBugTagePresented = await homePage.checkTagPresenceForToDoItem(expectedFixBugToDo,
@@ -79,10 +79,11 @@ test("Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm 
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectHeaderToBeVisible();
   homePage.navigateToWebApp();
-  const actualInProgressItem = await homePage.getInProgressByText(expectedInProgressText);
-  expect(expectedInProgressText).toBe(actualInProgressItem);
+  const actualInProgressItemLocator = await homePage.getInProgressByText(expectedInProgressText);
+  const actualInProgressItemText = await actualInProgressItemLocator?.locator("h3").innerText();
+  expect(actualInProgressItemText).toBe(expectedInProgressText);
 
-  const isDesignTagPresented = await homePage.checkTagPresence(
+  const isDesignTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
     expectedDesignTag
   );
   console.log(isDesignTagPresented);
