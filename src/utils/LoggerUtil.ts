@@ -10,7 +10,7 @@ const customFormat = winston.format.printf(({ level, message, timestamp }) => {
 });
 
 
-const timeZone = "Asia/Kolkata";
+const timeZone = "America/New_York";
 
 const logger = winston.createLogger({
   format: winston.format.combine(
@@ -21,14 +21,14 @@ const logger = winston.createLogger({
     new winston.transports.Console({ level: "debug" }),
     new winston.transports.File({
       filename: path.join(loggingDir, "test_run.log"),
-      maxFiles: 5, // Number of log files to retain
-      maxsize: 300 * 1024, // 10 * 1024 ==10 KB, specify the size in bytes
+      maxFiles: 5, 
+      maxsize: 300 * 1024, 
       level: "info",
     }),
     new winston.transports.File({
       filename: path.join(loggingDir, "test_error.log"),
-      maxFiles: 5, // Number of log files to retain
-      maxsize: 10 * 1024, // 10 KB, specify the size in bytes
+      maxFiles: 5, 
+      maxsize: 10 * 1024, 
       level: "error",
     }),
   ],

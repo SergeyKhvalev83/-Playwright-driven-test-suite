@@ -28,8 +28,10 @@ The automation framework is designed to provide a robust, scalable, and feature-
 ### 2.6 Testing results screenshots
 - **Objective:** Provide test result visualisation.
 
+### 2.7 Parallel Testing
+- **Objective:** Execute tests concurrently for faster feedback and optimized test suite execution.
 
-### Also can be implemented: Cross-Browser Testing, Multiple Environments, Parallel Testing
+### Also can be implemented: Cross-Browser Testing, Multiple Environments
 
 ## TO RUN ENTIRE TEST SUIT:
 ### npx playwright test testCaseDashBoardVerification.spec.ts
