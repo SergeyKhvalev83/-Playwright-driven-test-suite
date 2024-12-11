@@ -18,7 +18,8 @@ export default class LoginPage {
   }
 
   async navigateToLoginPage() {
-    await this.page.goto("https://animated-gingersnap-8cf7f2.netlify.app/");
+    //await this.page.goto("https://animated-gingersnap-8cf7f2.netlify.app/");
+    await this.page.goto(process.env.LOGIN_PAGE!);
     logger.info("Navigated to demo app");
   }
 
