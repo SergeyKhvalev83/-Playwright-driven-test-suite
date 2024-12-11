@@ -25,16 +25,20 @@ test("WEB_APP:_Verify_'Implement_user_authentication'_is_in_the 'To_Do'_column_a
   logger.info("Test for login is completed");
   await page.context().storageState({ path: authFile });
   logger.info("Auth state is saved");
-  const actualToDoLocator = await homePage.getToDoByText(expectedToDo);
-  const actualToDoText = await actualToDoLocator?.locator("h3").innerText()
-  console.log("ACTUAL RECIEVED: ", actualToDoText)
+  const actualToDoLocator = await homePage.getToDoItemByText(expectedToDo);
+  const actualToDoText = await actualToDoLocator?.locator("h3").innerText();
+  console.log("ACTUAL RECIEVED: ", actualToDoText);
   expect(actualToDoText).toBe(expectedToDo);
 
-  const isFeatureTagePresented = await homePage.checkTagPresenceForToDoItem(expectedToDo, expectedFeatureTag);
+  const isFeatureTagePresented = await homePage.checkTagPresenceForToDoItem(
+    expectedToDo,
+    expectedFeatureTag
+  );
   console.log(isFeatureTagePresented);
   expect(isFeatureTagePresented).toBeTruthy();
 
-  const isPriorityTagePresented = await homePage.checkTagPresenceForToDoItem(expectedToDo, 
+  const isPriorityTagePresented = await homePage.checkTagPresenceForToDoItem(
+    expectedToDo,
     expectedPriorityTag
   );
   console.log(isPriorityTagePresented);
@@ -53,17 +57,20 @@ test("WEB_APP:_Verify_'Fix_navigation_bug'_is_in_the_'To_Do_column_Confirm_tags:
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectHeaderToBeVisible();
   homePage.navigateToWebApp();
-  const actualFixBugToDoLocator = await homePage.getToDoByText(expectedFixBugToDo);
-  const actualFixBugToDoText = await actualFixBugToDoLocator?.locator("h3").innerText();
+  const actualFixBugToDoLocator = await homePage.getToDoItemByText(
+    expectedFixBugToDo
+  );
+  const actualFixBugToDoText = await actualFixBugToDoLocator
+    ?.locator("h3")
+    .innerText();
   expect(actualFixBugToDoText).toBe(expectedFixBugToDo);
 
-  const isBugTagePresented = await homePage.checkTagPresenceForToDoItem(expectedFixBugToDo,
+  const isBugTagePresented = await homePage.checkTagPresenceForToDoItem(
+    expectedFixBugToDo,
     expectedBugTag
   );
   console.log(isBugTagePresented);
   expect(isBugTagePresented).toBeTruthy();
-
-
 });
 
 test("WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and_Confirm tags: 'Design'", async ({
@@ -78,17 +85,21 @@ test("WEB_APP:_Verify_'Design system updates'_is_in_the_'In Progress'_column_and
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectHeaderToBeVisible();
   homePage.navigateToMobileApp();
-  const actualInProgressItemLocator = await homePage.getInProgressByText(expectedInProgressText);
-  const actualInProgressItemText = await actualInProgressItemLocator?.locator("h3").innerText();
+  const actualInProgressItemLocator = await homePage.getInProgressItemByText(
+    expectedInProgressText
+  );
+  const actualInProgressItemText = await actualInProgressItemLocator
+    ?.locator("h3")
+    .innerText();
   expect(actualInProgressItemText).toBe(expectedInProgressText);
 
-  const isDesignTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
+  const isDesignTagPresented = await homePage.checkTagPresenceForInProgressItem(
+    expectedInProgressText,
     expectedDesignTag
   );
   console.log(isDesignTagPresented);
   expect(isDesignTagPresented).toBeTruthy();
 });
-
 
 //TODO!!!!
 test("MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and_Confirm tags: 'Feature'", async ({
@@ -105,22 +116,22 @@ test("MOBILE_APP: Verify_'Push notification system'_is_in_the_'To_Do'_column_and
   await homePage.navigateToMobileApp();
   //await page.waitForTimeout(3000); // Wait for 3 seconds (3000 milliseconds)
 
-
-  const actualInToDoItemLocator = await homePage.getToDoByText(expectedToDoText);
-  const actualInProgressItemText = await actualInToDoItemLocator?.locator("h3").innerText();
+  const actualInToDoItemLocator = await homePage.getToDoItemByText(
+    expectedToDoText
+  );
+  const actualInProgressItemText = await actualInToDoItemLocator
+    ?.locator("h3")
+    .innerText();
   expect(actualInProgressItemText).toBe(expectedToDoText);
 
-  const isFeatureTagPresented = await homePage.checkTagPresenceForToDoItem(expectedToDoText,
+  const isFeatureTagPresented = await homePage.checkTagPresenceForToDoItem(
+    expectedToDoText,
     expectedTag
   );
   console.log(isFeatureTagPresented);
   expect(isFeatureTagPresented).toBeTruthy();
-  
 });
 
-
-
-//TODO!!!!
 test("MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confirm tags:_'Feature'_&_'High Priority'", async ({
   page,
 }) => {
@@ -135,20 +146,59 @@ test("MOBILE_APP:Verify_'Offline mode'_is_in_the_'In Progress'_column_and_Confir
   const homePage = await loginPage.clickLoginButton();
   await homePage.expectHeaderToBeVisible();
   await homePage.navigateToMobileApp();
-  const actualInProgressItemLocator = await homePage.getInProgressByText(expectedInProgressText);
-  const actualInProgressItemText = await actualInProgressItemLocator?.locator("h3").innerText();
+  const actualInProgressItemLocator = await homePage.getInProgressItemByText(
+    expectedInProgressText
+  );
+  const actualInProgressItemText = await actualInProgressItemLocator
+    ?.locator("h3")
+    .innerText();
   expect(actualInProgressItemText).toBe(expectedInProgressText);
 
-  const isFeatureTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
-    expectedFeatureTag
-  );
+  const isFeatureTagPresented =
+    await homePage.checkTagPresenceForInProgressItem(
+      expectedInProgressText,
+      expectedFeatureTag
+    );
   console.log(isFeatureTagPresented);
   expect(isFeatureTagPresented).toBeTruthy();
 
-  const isPriorityTagPresented = await homePage.checkTagPresenceForInProgressItem(expectedInProgressText,
-    expectedPriorityTag
-  );
+  const isPriorityTagPresented =
+    await homePage.checkTagPresenceForInProgressItem(
+      expectedInProgressText,
+      expectedPriorityTag
+    );
   console.log(isPriorityTagPresented);
   expect(isPriorityTagPresented).toBeTruthy();
+});
+
+//TODO!!!!
+test("MOBILE_APP:_Verify_'App_icon_design'_is_in_the_'Done'_column_and_Confirm tags:_'Design", async ({
+  page,
+}) => {
+  const expectedDoneItemText = "App icon design";
+  const expectedTag = "Design";
+
+  const loginPage = new LoginPage(page);
+  await loginPage.navigateToLoginPage();
+  await loginPage.fillUsername(process.env.APP_USERNAME!);
+  await loginPage.fillPassword(process.env.APP_PASSWORD!);
+  const homePage = await loginPage.clickLoginButton();
+  await homePage.expectHeaderToBeVisible();
+  await homePage.navigateToMobileApp();
+  const actualDoneItemLocator = await homePage.getDoneItemByText(
+    expectedDoneItemText
+  );
+  const actualDoneItemText = await actualDoneItemLocator
+    ?.locator("h3")
+    .innerText();
+  expect(actualDoneItemText).toBe(expectedDoneItemText);
+
+  const isFeatureTagPresented =
+    await homePage.checkTagPresenceForDoneItem(
+      expectedDoneItemText,
+      expectedTag
+    );
+  console.log(isFeatureTagPresented);
+  expect(isFeatureTagPresented).toBeTruthy();
 
 });

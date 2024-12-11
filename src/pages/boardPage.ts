@@ -10,9 +10,9 @@ export default class boardPage {
   private readonly toDoColumnLocator = "//h2[text()='To Do']/parent::*";
   private readonly inProgressColumnLocator =
     "//h2[text()='In Progress']/parent::*";
+    private readonly doneColumnLocator = "//h2[text()='Done']/parent::*";
 
-  //private readonly appWebOrMibileHeaderLocator =    ".px-6 py-4 flex justify-between items-center";
-
+  
   private readonly tagsContainerLocator =
     ".px-2.py-1.rounded-full.text-xs";
 
@@ -59,7 +59,7 @@ export default class boardPage {
       .then(() => logger.info("Dashboard main header is visible"));
   }
 
-  async getToDoByText(toDoTitle: string): Promise<Locator | null> {
+  async getToDoItemByText(toDoTitle: string): Promise<Locator | null> {
     const toDoColumn = this.page.locator(this.toDoColumnLocator);
     const listOfToDoes = toDoColumn.locator(".bg-white");
     const toDoesCount = await listOfToDoes.count();
@@ -75,7 +75,7 @@ export default class boardPage {
     return null;
   }
 
-  async getInProgressByText(inProgress: string): Promise<Locator | null> {
+  async getInProgressItemByText(inProgress: string): Promise<Locator | null> {
     const inProgressColumn = this.page.locator(this.inProgressColumnLocator);
     const listOfInProgressItems = inProgressColumn.locator(".bg-white");
     const inProgressItemsCount = await listOfInProgressItems.count();
@@ -94,13 +94,29 @@ export default class boardPage {
     return null;
   }
 
+  async getDoneItemByText(doneItemTitle: string): Promise<Locator | null> {
+    const doneColumn = this.page.locator(this.doneColumnLocator);
+    const listOfDoneItems = doneColumn.locator(".bg-white");
+    const doneItemsCount = await listOfDoneItems.count();
+    for (let i = 0; i < doneItemsCount; i++) {
+      const retrievedDoneItemText = await listOfDoneItems
+        .nth(i)
+        .locator("h3")
+        .innerText();
+      if (retrievedDoneItemText == doneItemTitle) {
+        return listOfDoneItems.nth(i);
+      }
+    }
+    return null;
+  }
+
   async checkTagPresenceForToDoItem(
     todoTitle: string,
     tagTitle: string
   ): Promise<boolean> {
     let isPriorityTagPresented = false;
     await this.page.waitForSelector(this.toDoColumnLocator);
-    const toDoLocator = await this.getToDoByText(todoTitle);
+    const toDoLocator = await this.getToDoItemByText(todoTitle);
     if (toDoLocator) {
       const featurePriorityContainer = toDoLocator.locator(
         this.tagsContainerLocator
@@ -128,7 +144,7 @@ export default class boardPage {
   ): Promise<boolean> {
     let isTagPresented = false;
     await this.page.waitForSelector(this.toDoColumnLocator);
-    const inProgressLocator = await this.getInProgressByText(inProgressItemTitle);
+    const inProgressLocator = await this.getInProgressItemByText(inProgressItemTitle);
     if (inProgressLocator) {
       const tagsContainer = inProgressLocator.locator(
         this.tagsContainerLocator
@@ -150,6 +166,33 @@ export default class boardPage {
     return isTagPresented;
   }
 
+  async checkTagPresenceForDoneItem(
+    doneItemTitle: string,
+    tagTitle: string
+  ): Promise<boolean> {
+    let isTagPresented = false;
+    await this.page.waitForSelector(this.toDoColumnLocator);
+    const doneItemLocator = await this.getDoneItemByText(doneItemTitle);
+    if (doneItemLocator) {
+      const tagsContainer = doneItemLocator.locator(
+        this.tagsContainerLocator
+      );
+      const itemCount = await tagsContainer.count();
+      console.log("!!!!!!!!!!!!", itemCount);
+
+      for (let i = 0; i < itemCount; i++) {
+        const retrievedTagText = await tagsContainer
+          .nth(i)
+          .textContent();
+        console.log(retrievedTagText);
+        if (retrievedTagText == tagTitle) {
+          isTagPresented = true;
+        }
+      }
+    }
+
+    return isTagPresented;
+  }
 
 
   /*
